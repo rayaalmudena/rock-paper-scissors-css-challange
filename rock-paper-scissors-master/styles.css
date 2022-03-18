@@ -43,13 +43,19 @@ body{
 
  
  .paper{
-    border-color: hsl(230, 89%, 65%) !important;    
+    border-width: 8px;
+    border-style: solid;
+    border-color: hsl(230, 89%, 65%);    
  }
  .scissors{
-     border-color:  hsl(40, 84%, 53%) !important;
+    border-width: 8px;
+    border-style: solid;
+     border-color:  hsl(40, 84%, 53%);
  }
  .rock{
-     border-color: hsl(349, 70%, 56%) ;
+    border-width: 8px;
+    border-style: solid;
+    border-color: hsl(349, 70%, 56%);
  }
  
 
@@ -92,9 +98,9 @@ body{
     color: white;    
     text-transform: uppercase;
     font-weight: bold;
-    
 
 }
+
 #end-of-game{
     display: none;
 }
@@ -117,7 +123,6 @@ body{
     height: 300px;
     background: white; 
     border-radius: 150px;
-    border: 8px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,4 +142,24 @@ body{
 #random-bot-pick{
     display: none;
     
+    
+}
+
+
+.modal-body{
+    align-items: center;
+
+}
+.modal-body img{
+    position: relative;
+}
+
+.rotate{
+    transform: rotateX(-0deg);
+	animation: rotateAnimation 1s linear;
+}
+
+@keyframes rotateAnimation {
+	from {transform: rotateX(0deg);}
+	to {transform: rotateX(360deg);}
 }

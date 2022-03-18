@@ -1,4 +1,5 @@
 let userPick="";
+let random="";
 const serverPickArray=["rock","paper","scissors"];
 
 document.querySelector("#rock-option").addEventListener("click", saveElection);
@@ -11,21 +12,24 @@ function saveElection(event) {
     document.querySelector(".choose-option").style.display="none"; 
     document.querySelector("#end-of-game").style.display="flex";
     document.querySelector("#your-pick").src="./images/icon-"+userPick+".svg";      
+    document.querySelector("#your-pick").parentNode.classList.add(userPick);
 }
 
 
 document.querySelector(".house-pick").addEventListener("click", showelectionhouse);
 
 function showelectionhouse(){
-    var random = serverPickArray[Math.floor(Math.random()*serverPickArray.length)];
+    random = serverPickArray[Math.floor(Math.random()*serverPickArray.length)];
     document.querySelector("#random-bot-pick").src="./images/icon-"+random+".svg";
     document.querySelector("#random-bot-pick").style.display="block";
+    document.querySelector("#random-bot-pick").parentNode.classList.add(random);
+    document.querySelector("#random-bot-pick").parentNode.classList.add("rotate");
     winlose(random);    
     document.querySelector(".house-pick").removeEventListener("click", showelectionhouse);
 
 }
 
-function winlose(random){
+function winlose(){
     if(userPick==random){
         console.log("Empate");
         document.querySelector(".text-draw").style.display="flex";
@@ -43,8 +47,6 @@ function winlose(random){
     document.querySelector(".result-end-game").style.display="flex";
     
 }
-
-
 
 function changeScore(e){
     let score = +document.querySelector("#score").innerHTML;
@@ -69,6 +71,10 @@ function playAgain() {
     document.querySelector(".text-you-lose").style.display="none";
     document.querySelector(".result-end-game").style.display="none";
     document.querySelector(".text-you-win").style.display="none";
+
+    document.querySelector("#random-bot-pick").parentNode.classList.remove(random);
+    document.querySelector("#random-bot-pick").parentNode.classList.remove("rotate");
+    document.querySelector("#your-pick").parentNode.classList.remove(userPick);
     
     document.querySelector("#random-bot-pick").style.display="none";
     document.querySelector(".house-pick").addEventListener("click", showelectionhouse);

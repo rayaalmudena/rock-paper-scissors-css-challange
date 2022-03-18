@@ -38,27 +38,31 @@
   <div class="choose-option">
     <div class="top-options-choosse">
       <div id="paper-option" data-option="paper" class="circle paper">
-        <img src="./images/icon-paper.svg" alt="paper"></div>
+        <img src="./images/icon-paper.svg" alt="paper">
+      </div>
       <div id="scissors-option" data-option="scissors" class="circle scissors">
-        <img src="./images/icon-scissors.svg" alt="Scissors"></div>
+        <img src="./images/icon-scissors.svg" alt="Scissors">
+      </div>
     </div>
     <div class="bottom-options-choose">
       <div id="rock-option" data-option="rock" class="circle rock">
-        <img src="./images/icon-rock.svg" alt="rock"></div>
+        <img src="./images/icon-rock.svg" alt="rock">
+      </div>
     </div>
   </div>
 
   <div id="end-of-game">
     <div class="your-pick">
-      <span class="text-end-of-game">You Picked</span> 
+      <span class="text-end-of-game">You Picked</span>
       <div class="circle2">
-        <img id="your-pick" src="" alt="">    
-      </div> 
+        <img id="your-pick" src="" alt="">
+      </div>
     </div>
     <div class="house-pick">
-      <span class="text-end-of-game">The House Picked</span> 
+      <span class="text-end-of-game">The House Picked</span>
       <div class="circle2">
-        <img id="random-bot-pick" src="" alt="">  </div>  
+        <img id="random-bot-pick" src="" alt="">
+      </div>
     </div>
     <div class="result-end-game">
       <h2 class="text-you-win hide-text">YOU WIN</h2>
@@ -69,18 +73,30 @@
   </div>
 
 
+
   <div class="div-rules">
-    <button id="rules-button">RULES</button>
+    <button id="rules-button" type="button" class="div-rules btn btn-primary" data-bs-toggle="modal"
+      data-bs-target="#exampleModal">
+      RULES
+    </button>
   </div>
 
-  <!-- The Modal -->
-  <div id="rulesModal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>Some text in the Modal..</p>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img class="mx-auto d-block" src="./images/image-rules.svg" alt="rules">
+        </div>
+
+      </div>
     </div>
   </div>
+
 
 
 
