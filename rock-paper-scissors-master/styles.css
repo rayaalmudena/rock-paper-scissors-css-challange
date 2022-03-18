@@ -40,11 +40,21 @@ body{
     align-items: center;
     justify-content: center;
  }
- #paper-option{
-    border-color: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));    
+
+ 
+ .paper{
+    border-color: hsl(230, 89%, 65%) !important;    
+ }
+ .scissors{
+     border-color:  hsl(40, 84%, 53%) !important;
+ }
+ .rock{
+     border-color: hsl(349, 70%, 56%) ;
  }
  
- .circle img{
+
+
+ .circle img, .circle2 img{
      height: 80%;
  }
 
@@ -53,7 +63,7 @@ body{
      background-image: url(./images/bg-triangle.svg);
      background-repeat: no-repeat;
      background-position: center;
-     display: none;
+     
  }
 
 .top-options-choosse{
@@ -64,7 +74,7 @@ body{
     margin-top: 0;
 }
 
-.bottom-options-choose{
+.bottom-options-choose, .div-rules{
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
@@ -80,7 +90,26 @@ body{
 
 .text-end-of-game{
     color: white;    
+    text-transform: uppercase;
+    font-weight: bold;
+    
 
+}
+#end-of-game{
+    display: none;
+}
+
+.result-end-game{
+    color: white;
+    display: none;  
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.hide-text{
+    display: none;
 }
 
 .circle2 { 
@@ -93,3 +122,19 @@ body{
     align-items: center;
     justify-content: center;
  }
+
+
+#rules-button{
+    text-transform: uppercase;
+    color: white;
+    background-color: unset;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+
+#random-bot-pick{
+    display: none;
+    
+}

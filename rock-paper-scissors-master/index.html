@@ -37,36 +37,42 @@
 
   <div class="choose-option">
     <div class="top-options-choosse">
-      <div id="paper-option" class="circle"><img src="./images/icon-paper.svg" alt="paper"></div>
-      <div id="scissors-option" class="circle"><img src="./images/icon-scissors.svg" alt="Scissors"></div>
+      <div id="paper-option" data-option="paper" class="circle paper">
+        <img src="./images/icon-paper.svg" alt="paper"></div>
+      <div id="scissors-option" data-option="scissors" class="circle scissors">
+        <img src="./images/icon-scissors.svg" alt="Scissors"></div>
     </div>
     <div class="bottom-options-choose">
-      <div id="rock" class="circle"><img src="./images/icon-rock.svg" alt="rock"></div>
+      <div id="rock-option" data-option="rock" class="circle rock">
+        <img src="./images/icon-rock.svg" alt="rock"></div>
     </div>
   </div>
 
   <div id="end-of-game">
     <div class="your-pick">
       <span class="text-end-of-game">You Picked</span> 
-      <img id="your-pick" class="circle2" src="" alt="">     
+      <div class="circle2">
+        <img id="your-pick" src="" alt="">    
+      </div> 
     </div>
     <div class="house-pick">
       <span class="text-end-of-game">The House Picked</span> 
-      <img id="random-bot-pick" class="circle2" src="" alt="">    
+      <div class="circle2">
+        <img id="random-bot-pick" src="" alt="">  </div>  
     </div>
     <div class="result-end-game">
-      <h2 class="text-you-win">YOU WIN</h2>
-      <h2 class="text-draw">DRAW</h2>
-      <h2 class="text-you-lose">YOU LOSE</h2>
-      <button class="btn btn-play-again">PLAY AGAIN</button>
+      <h2 class="text-you-win hide-text">YOU WIN</h2>
+      <h2 class="text-draw hide-text">DRAW</h2>
+      <h2 class="text-you-lose hide-text">YOU LOSE</h2>
+      <button class="btn-play-again">PLAY AGAIN</button>
     </div>
   </div>
 
 
-
-  <div>
+  <div class="div-rules">
     <button id="rules-button">RULES</button>
   </div>
+
   <!-- The Modal -->
   <div id="rulesModal" class="modal">
     <!-- Modal content -->
